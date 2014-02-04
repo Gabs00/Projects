@@ -1,0 +1,85 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Data::Dumper;
+
+#prints the prime factorials of the provided number
+my $input;
+while(!$input) {
+	print "Please enter a whole number to see its prime factors: ";
+	chomp ($input = <>);
+}
+
+print "\n\nNote this could take some time if you entered a large number!\n";
+
+$input =~ s/\s+//;
+$input =~ s/,//;
+$input = int($input);
+my @answer = @{ fin($input) };
+
+print "Prime factorials for: $input\n", join('*', @answer);
+
+
+#=====================================#
+#			  SUBROUTINES             #
+#=====================================#
+sub fin {
+	my @final;
+	my $i = shift;
+	my $k = 0;
+	my $count = 0;
+
+	while($i != $k){
+		print ".";
+		my $check = factor($i);
+		if($check){
+			my @list = @{ $check };
+
+			$i = shift @list;;
+
+			push @final, $list[0];
+		}
+		else {
+			push @final, $i;
+			$k =$i;
+		}
+	}
+	print "\n";
+	return \@final;
+}
+#goes through list of prime factors from bottom to top until it reaches 
+#one that divides evenly into input number, then returns arr_ref with first
+#element the number divided to and second element the prime divisor.
+sub factor {
+	my $n = shift;
+	my @primes = @{ getPrimes($n) };
+	shift @primes;
+	foreach (@primes){
+		if($n%$_ == 0){
+			return [$n/$_, $_];
+		}
+	}
+	return 0;
+}
+
+sub getPrimes {
+	my $n = shift;
+	my @primelist;
+
+	for my $number(0 .. $n/2){
+		push @primelist, $number if prime($number);
+	}
+	return \@primelist;
+}
+sub prime {
+	my $n = shift;
+	
+	my @divisors = (2 .. int(sqrt($n)));
+	
+	for(@divisors){
+		return undef unless $n%$_;
+	}
+	
+	return $n;
+}

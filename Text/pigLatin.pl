@@ -4,11 +4,12 @@ use strict;
 use warnings;
 
 
-my $sentence;
+
 my $go = 1;
 print "\n", pigSentence("Welcome to the pig latin converter."), "\n\n";
 
 while($go){
+	my $sentence;
 	while(!($sentence)){
 		print "Please type a sentence to be translated into igpay atinlay: ";
 		chomp ($sentence = <>);

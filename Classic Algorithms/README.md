@@ -1,7 +1,7 @@
 Classic Algorithms
 -----------------
 
-**Collatz Conjecture** (https://github.com/Gabs00/Projects/blob/master/Classic Algorithms/collatz.pl)- Start with a number *n > 1*. Find the number of steps it takes to reach one using the following process: If *n* is even, divide it by 2. If *n* is odd, multiply it by 3 and add 1.
+[**Collatz Conjecture**] (https://github.com/Gabs00/Projects/blob/master/Classic Algorithms/collatz.pl)- Start with a number *n > 1*. Find the number of steps it takes to reach one using the following process: If *n* is even, divide it by 2. If *n* is odd, multiply it by 3 and add 1.
 
 **Sorting** - Implement two types of sorting algorithms: Merge sort and bubble sort.
 

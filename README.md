@@ -6,11 +6,11 @@ Numbers
 
 **Find PI to the Nth Digit** - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.
 
-**Fibonacci Sequence** - Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.
+[**Fibonacci Sequence**] (https://github.com/Gabs00/Projects/blob/master/Numbers/fibonacci.pl)- Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.
 
-**Prime Factorization** - Have the user enter a number and find all Prime Factors (if there are any) and display them.
+[**Prime Factorization**] (https://github.com/Gabs00/Projects/blob/master/Numbers/primeFactors.pl)- Have the user enter a number and find all Prime Factors (if there are any) and display them.
 
-**Next Prime Number** - Have the program find prime numbers until the user chooses to stop asking for the next one.
+[**Next Prime Number**] (https://github.com/Gabs00/Projects/blob/master/Numbers/nextPrime.pl)- Have the program find prime numbers until the user chooses to stop asking for the next one.
 
 **Find Cost of Tile to Cover W x H Floor** - Calculate the total cost of tile it would take to cover a floor plan of width and height, using a cost entered by the user.
 
@@ -43,7 +43,7 @@ Numbers
 Classic Algorithms
 -----------------
 
-**Collatz Conjecture** - Start with a number *n > 1*. Find the number of steps it takes to reach one using the following process: If *n* is even, divide it by 2. If *n* is odd, multiply it by 3 and add 1.
+[**Collatz Conjecture**] (https://github.com/Gabs00/Projects/blob/master/Classic Algorithms/collatz.pl)- Start with a number *n > 1*. Find the number of steps it takes to reach one using the following process: If *n* is even, divide it by 2. If *n* is odd, multiply it by 3 and add 1.
 
 **Sorting** - Implement two types of sorting algorithms: Merge sort and bubble sort.
 
@@ -70,16 +70,15 @@ Data Structures
 
 Text
 ---------
+[**Reverse a String**] (https://github.com/Gabs00/Projects/blob/master/Text/reverse.pl)- Enter a string and the program will reverse it and print it out.
 
-**Reverse a String** - Enter a string and the program will reverse it and print it out.
+[**Pig Latin**] (https://github.com/Gabs00/Projects/blob/master/Text/pigLatin.pl)- Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
 
-**Pig Latin** - Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
-
-**Count Vowels** - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
+[**Count Vowels**] (https://github.com/Gabs00/Projects/blob/master/Text/vowelCount.pl)- Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
 
 **Check if Palindrome** - Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”
 
-**Count Words in a String** - Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
+[**Count Words in a String**] (https://github.com/Gabs00/Projects/blob/master/Text/wordCount.pl)- Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
 
 **Text Editor** - Notepad style application that can open, edit, and save text documents. *Optional: Add syntax highlighting and other features.*
 
@@ -221,7 +220,7 @@ Graphics and Multimedia
 Security
 -------------
 
-**Caesar cipher** - Implement a Caesar cipher, both encoding and decoding. The key is an integer from 1 to 25. This cipher rotates the letters of the alphabet (A to Z). The encoding replaces each letter with the 1st to 25th next letter in the alphabet (wrapping Z to A). So key 2 encrypts "HI" to "JK", but key 20 encrypts "HI" to "BC". This simple "monoalphabetic substitution cipher" provides almost no security, because an attacker who has the encoded message can either use frequency analysis to guess the key, or just try all 25 keys.
+[**Caesar cipher**] (https://github.com/Gabs00/Projects/blob/master/Security/ceasar.pl)- Implement a Caesar cipher, both encoding and decoding. The key is an integer from 1 to 25. This cipher rotates the letters of the alphabet (A to Z). The encoding replaces each letter with the 1st to 25th next letter in the alphabet (wrapping Z to A). So key 2 encrypts "HI" to "JK", but key 20 encrypts "HI" to "BC". This simple "monoalphabetic substitution cipher" provides almost no security, because an attacker who has the encoded message can either use frequency analysis to guess the key, or just try all 25 keys.
 
 ===============================================
 

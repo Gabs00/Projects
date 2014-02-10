@@ -41,7 +41,7 @@ else {
 
 
 #====================================#
-#				SUBROUTINES                  #
+#	SUBROUTINES                  #
 #====================================#
 
 
@@ -124,7 +124,7 @@ sub UppLow {
 	return defined($1);
 }
 
-#creates an array a - z x -a as an array and a letter to number mapping as a hash
+#creates an array a - z a - z as an array and a letter to number mapping as a hash
 
 sub createCy {
 	my @alpha = ('a' .. 'z');

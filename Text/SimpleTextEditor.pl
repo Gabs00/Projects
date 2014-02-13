@@ -87,7 +87,7 @@ $win->bind('Tk::TextUndo', '<Control-Key-w>',
 MainLoop;
 
 #############################
-###		Subroutines		#####
+#Subroutines
 #############################
 
 
@@ -170,12 +170,12 @@ sub saveFile {
 }
 
 sub about {
-		my $about =$win->Dialog(
-							-title => "About: Text Editor",
-							-text => '',
-							-buttons => ['ok'],
-							);
-		$about->configure(-text => "Program Name: Simple Text Editor\nCreated By: Gabs00\nDate: Feb. 12 2014");
-		$about->Show;
+	my $about =$win->Dialog(
+				-title => "About: Text Editor",
+				-text => '',
+				-buttons => ['ok'],
+				);
+	$about->configure(-text => "Program Name: Simple Text Editor\nCreated By: Gabs00\nDate: Feb. 12 2014");
+	$about->Show;
 }
 

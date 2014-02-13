@@ -48,10 +48,10 @@ for(qw/new open save saveA close/){
 }
 
 my $text = $win->Scrolled('TextUndo',
-						   -scrollbars => 'se')->pack(-fill => 'both',
-														-expand => 1,
-														-side => 'bottom'
-														);
+			-scrollbars => 'se')->pack(-fill => 'both',
+					           -expand => 1,
+						   -side => 'bottom'
+						   );
 #events for once each button is used
 $filemenu{'new'}->configure(-command => \&createNew);
 $filemenu{'open'}->configure(-command => \&openFile);

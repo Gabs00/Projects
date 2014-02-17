@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+#
+#INCOMPLETE
+#
 package Inventory;
 use Moose;
 use namespace::autoclean;

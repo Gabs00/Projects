@@ -1,7 +1,8 @@
 Created by: Gabs00
 
 Still work to be completed on this, need to add the Vernam Cypher, also will spend time refactoring all the code.
-{
+
+```perl
 my $vig = Vigenere->new(phrase => 'flying');		#create Vigenere class, phrase is required
 
 my $text = "Hello"; $vig->text($text);			    #sets the text to be de/encrypted
@@ -20,3 +21,5 @@ print $vig->crypto($from, 1), "\n";			        #1 argument for, text to be en/dec
 $vig->key(5);						                        #ceasar cypher can be used as well
 print $vig->Ceasar::cypher("abc\n");			      #Vigenere class overrides ceasars cypher method
 }
+
+```

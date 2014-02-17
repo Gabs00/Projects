@@ -19,7 +19,8 @@ $vig->from_array("stuff", @list);               #First argument can be a string,
 
 print $vig->crypto();                           #prints the encrypted string that has been set with text.
 
-print $vig->crypto($from, 1), "\n";             #1 argument for, text to be en/decrypted, second argument is mode, 1                                                      #for decryption.
+print $vig->crypto($from, 1), "\n";             #first argument for, text to be en/decrypted, second argument is mode, 1
+                                                #for decryption.
 
 $vig->key(5);                                   #ceasar cypher can be used as well
 print $vig->Ceasar::cypher("abc\n");            #Vigenere class overrides ceasars cypher method

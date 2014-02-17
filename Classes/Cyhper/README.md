@@ -21,7 +21,7 @@ print $vig->crypto();                           #prints the encrypted string tha
 
 print $vig->crypto($from, 1), "\n";             #1 argument for, text to be en/decrypted, second argument is mode, 1                                                      #for decryption.
 
-$vig->key(5);					#ceasar cypher can be used as well
+$vig->key(5);                                   #ceasar cypher can be used as well
 print $vig->Ceasar::cypher("abc\n");            #Vigenere class overrides ceasars cypher method
 }
 

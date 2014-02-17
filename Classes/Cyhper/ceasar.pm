@@ -56,14 +56,14 @@ sub cypher {
 
 		if($temp[$index] =~ /[a-zA-Z]/){
 			if($encrypt){
-				$self->UppLow($self,$temp[$index]);
+				$self->UppLow($temp[$index]);
 				my $pushVal = $alpha->[($alpha_map->{lc($temp[$index])}+$key)];
 				$pushVal = uc($pushVal) if $self->case;
 				push @newPhrase, $pushVal;
 				$self->case(0);
 			}
 			else{
-				$self->UppLow($self,$temp[$index]);
+				$self->UppLow($temp[$index]);
 				my $pushVal = $alpha->[($alpha_map->{lc($temp[$index])}-$key)];
 				$pushVal = uc($pushVal) if $self->case;
 				push @newPhrase, $pushVal;

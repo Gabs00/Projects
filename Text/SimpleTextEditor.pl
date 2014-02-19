@@ -24,14 +24,19 @@ $win->geometry('600x800');
 $win->configure(-menu => my $menubar = $win->Menu( ), -title => 'Simple Text Editor');
 
 #Menubar items ie. file edit view etc bar 
-my $file = $menubar->cascade(-label => '~File', -tearoff => 0);
+#Cascade is the drop down menu
+my $file = $menubar->cascade(-label => '~File', -tearoff => 0);		#tearoff is the ability to detach the menu,
+									#defaults to 1
 #my $edit = $menubar->cascade(-label => '~Edit', -tearoff => 0);	#Not yet implemented, questionable whether it ever will be
 
 #Sets up the help about menu
+#The -command is the action that will occur when the button / item is selected
 my $help = $menubar->cascade(-label => '~Help', -tearoff => 0);
 $help->command(-label => 'About', -command => \&about);
 
 #Menu items for file menu
+#FYI this can be done quick and easy with map, but we'll get there eventually.
+#The index 0 = menu item name, index 1 = shortcut keys, index 2 = which char in name will be underlined
 my %filemenu = (
 	"new" => [qw/New Ctrl-n 0/],
 	"open" => [qw/Open Ctrl-o 0/],
@@ -42,17 +47,26 @@ my %filemenu = (
 
 
 
-#this for overwrites the previous values in the hash filemenu
+#This for overwrites the previous values in the hash filemenu
+#This hash provides access to all the menu items, so that we have a 
+#Handle to use if we need to change anything
 for(qw/new open save saveA close/){
 	$filemenu{$_} = menu_items($file, @{$filemenu{$_}});
 }
 
+#-scrollbars => 'se' puts a scrollbar east and south.
+#Pack is required to get the text widget to show in the gui,
+#expand => 1 fills the entire remaining space where the widget is located
+#-side => bottom puts it under any other widgets in the same area.
+#-fill => 'both' fills the entire allotment of -side, I think.
 my $text = $win->Scrolled('TextUndo',
 			-scrollbars => 'se')->pack(-fill => 'both',
 					           -expand => 1,
 						   -side => 'bottom'
 						   );
-#events for once each button is used
+#Events for once each button is used
+#Configure is used to change properties of a widget after its
+#creation.
 $filemenu{'new'}->configure(-command => \&createNew);
 $filemenu{'open'}->configure(-command => \&openFile);
 $filemenu{'save'}->configure(-command => \&save);

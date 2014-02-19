@@ -27,7 +27,8 @@ $win->configure(-menu => my $menubar = $win->Menu( ), -title => 'Simple Text Edi
 #Cascade is the drop down menu
 my $file = $menubar->cascade(-label => '~File', -tearoff => 0);		#tearoff is the ability to detach the menu,
 									#defaults to 1
-#my $edit = $menubar->cascade(-label => '~Edit', -tearoff => 0);	#Not yet implemented, questionable whether it ever will be
+#my $edit = $menubar->cascade(-label => '~Edit', -tearoff => 0);	#Not yet implemented, questionable whether it 
+									#ever will be
 
 #Sets up the help about menu
 #The -command is the action that will occur when the button / item is selected

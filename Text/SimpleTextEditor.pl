@@ -107,6 +107,9 @@ MainLoop;
 
 
 #creates menu items
+#takes a menu widget and list 
+#returns a reference to a menu item
+#note, doesn't need to be packed
 sub menu_items {
 	my $menus = shift;
 	my ($label, $acc, $under) = @_;
@@ -118,12 +121,18 @@ sub menu_items {
 	);
 	
 }
+
+#Clears text in main window
+#clears current File so that there is not accidental file overwrites
 sub createNew {
 	my $choice = openDialog();
 	if(defined($choice)){
 		$text->delete('1.0', 'end');
+		undef($currentFile);
 	}
 }
+
+
 sub openFile {
 	my $choice = openDialog();
 	if(defined($choice)){
@@ -140,6 +149,11 @@ sub openFile {
 	}
 }
 
+
+#Straight forward, makes a dialog box for whether
+#you want to save the current file..
+#for dialogs, don't need to pack, use Show.
+#Show returns the button selected.
 sub openDialog {
 	my @items = ("Save","Save As","Discard");
 	

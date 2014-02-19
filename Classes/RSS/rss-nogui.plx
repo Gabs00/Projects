@@ -24,7 +24,7 @@ my @items = @{ $man->RSS->items };
 
 for my $i (0 .. $#items){
 	my %item = %{ $items[$i] };
-	printf "Title: $item{'title'}\n";
-	printf "\tDescription: $item{'description'}\n";
-	printf "\n\tLink: $item{'link'}\n";
+	print "Title: $item{'title'}\n";
+	print "\tDescription: $item{'description'}\n";
+	print "\n\tLink: $item{'link'}\n";
 }

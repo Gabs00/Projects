@@ -26,11 +26,18 @@ has alpha => (
 	builder => 'get_alpha',
 );
 
+#A flag used to determine whether the character was upper case.
+#Doessn't need to be a object member, but this happened when troubleshooting another
+#need to revert this change
 has case => (
 	is => 'rw',
 	isa => 'Bool',
 	default => '0',
 );
+
+#Used to shift alphabet and make new arrays later
+#I've seen this solved aqs an equation, but I like showing it this way
+#seems so much clearer than a = n(n+1) (<= not actual formula)
 sub get_alpha {
 	return ['a' .. 'z', 'a' .. 'z'];
 }
@@ -44,6 +51,7 @@ sub get_map {
 	return \%hash;
 }
 
+#Magic occurs here
 sub cypher {
 	my $self = shift;
 	my ($key, $phrase) = ($self->key, $_[0]);
@@ -53,10 +61,15 @@ sub cypher {
 	my @newPhrase;
 	my @temp = split '', $phrase;
 	for my $index(0 .. (@temp-1)){
-
+		
 		if($temp[$index] =~ /[a-zA-Z]/){
 			if($encrypt){
 				$self->UppLow($temp[$index]);
+				
+				#For char at index $index
+				#Find the index of char at $index in the alpha_map hash
+				#Add that index to the key.
+				#The char is now the new char at the new index in $alpha ('a'..'z', 'a'..'z')
 				my $pushVal = $alpha->[($alpha_map->{lc($temp[$index])}+$key)];
 				$pushVal = uc($pushVal) if $self->case;
 				push @newPhrase, $pushVal;
@@ -64,6 +77,9 @@ sub cypher {
 			}
 			else{
 				$self->UppLow($temp[$index]);
+				
+				#same as above but instead you subtract the key from the 
+				#index
 				my $pushVal = $alpha->[($alpha_map->{lc($temp[$index])}-$key)];
 				$pushVal = uc($pushVal) if $self->case;
 				push @newPhrase, $pushVal;

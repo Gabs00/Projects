@@ -21,6 +21,7 @@ my $currentFile;
 
 my $win = new MainWindow;
 $win->geometry('600x800');
+
 #VERY IMPORTANT FOR GETTING MENU TO WORK
 #need to use configure or define when creating MainWindow
 #can be tricky.

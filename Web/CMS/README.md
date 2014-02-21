@@ -4,8 +4,8 @@ CMS
 
 ###Purpose:
 Creating a single page CMS with :
--Single page for user access
--Single page for admin access
+*Single page for user access
+*Single page for admin access
 
 ###Needs:
 

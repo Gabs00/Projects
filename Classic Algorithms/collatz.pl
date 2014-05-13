@@ -11,7 +11,7 @@ my $num = 1;
 my $steps = 0;
 
 while($num <= 1) {
-	print "Collatz Conjecture:\nPlease enter a number great than 1:";
+	print "Collatz Conjecture:\nPlease enter a number greater than 1:";
 	chomp ($num =<>);
 }
 

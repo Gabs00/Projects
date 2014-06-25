@@ -192,7 +192,16 @@
 			
 		},1000);
 	}
-    
+
+	Bomb.prototype.reset = function(val){
+	        if(val){
+	            this.time = val;
+	            this.remaining = val;
+	        }
+	        else{
+	            this.remaining = this.time;
+	        }
+	    }
 function switch_gate(gate_type){
     var inp = [];
     var outp = [];

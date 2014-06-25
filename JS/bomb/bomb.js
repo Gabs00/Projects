@@ -148,7 +148,6 @@
     Gate.prototype.Exor = function(){
         var i = 0;
         this.inp.forEach(function(val){
-            console.log(val)
             if(val){
                 if(val.is_on){
                     i++;
@@ -358,7 +357,13 @@ function gate_to_gate(in_gates, bomb, time){
     }
 }
 
-
+function linker(g1, g2, bomb){
+    var b = bomb || [[],[]];
+    var f = gate_to_gate([g1.out, g2.out], b[0], b[1]);
+    g1.add_out(f.out);
+    g2.add_out(f.out);
+    return f;
+}
 
 
 
